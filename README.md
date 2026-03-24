@@ -6,6 +6,7 @@ In mental healthcare coordination, the transition from a matching consult to the
 
 This project is a Python-based decision-support tool designed to help Care Coordination teams move from manual triaging to data-driven outreach. It analyzes patient milestone data to identify exactly where the "leaky bucket" is in the onboarding funnel and flags specific clients who require immediate follow-up.
 
+
 Features
 Automated Risk Categorization: Uses custom logic to flag "High Risk" cases where a match has stalled for more than 7 days.
 
@@ -15,12 +16,14 @@ Operational Dashboard: Generates a visual bar chart (via Matplotlib) to give lea
 
 Actionable Outreach List: Filters and exports a high-priority list of clients needing intervention, saving coordinators hours of manual spreadsheet review.
 
+
 Tech Stack
 Python 3
 
 Pandas: For data manipulation and datetime delta calculations.
 
 Matplotlib: For data visualization and pipeline reporting.
+
 
 How It Works
 Data Ingestion: The script reads a care_journey_data.csv containing patient milestones.
@@ -30,6 +33,7 @@ Date Processing: Converts raw strings into datetime objects to calculate precise
 Risk Mapping: Applies a logic function to segment patients into categories like High Risk: Stalled Match, Pending, or Active Care.
 
 Reporting: Outputs a summary of urgent tasks and saves a visual distribution chart (care_journey_dashboard.png).
+
 
 Impact
 This tool transforms the Care Coordinator role from reactive to proactive. By identifying bottlenecks in real-time, operations teams can:
