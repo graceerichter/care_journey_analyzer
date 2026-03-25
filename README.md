@@ -1,6 +1,7 @@
 Care Journey & Operational Bottleneck Analyzer
 
 📌 Project Overview
+
 In mental healthcare, the "Time-to-Care" (the gap between a client’s initial inquiry and their first therapy session) is the most critical predictor of patient success. If a match stalls, the likelihood of a patient disengaging increases exponentially.
 
 This Python-based Operational Suite automates the triaging process for Care Coordination teams. It identifies exactly where patients are stuck in the funnel and generates high-priority outreach lists, transforming a reactive workflow into a proactive, data-driven strategy.
