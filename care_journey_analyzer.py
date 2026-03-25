@@ -46,3 +46,16 @@ plt.tight_layout()
 # Save the visual for the portfolio
 plt.savefig('care_journey_dashboard.png')
 print("Analysis complete. Dashboard saved as care_journey_dashboard.png")
+# 5. Create the Outreach List (Filtered for only High Risk/Pending)
+outreach_list = df[df['status_category'].str.contains('High Risk|Pending')].copy()
+
+# 6. Export the Actionable Spreadsheet
+# 'index=False' prevents Python from adding an extra column of row numbers
+outreach_list.to_csv('daily_outreach_report.csv', index=False)
+
+# 7. Export the High-Level Summary (The stats for your manager)
+status_counts.to_csv('executive_summary_report.csv', header=['Patient_Count'])
+
+print("--- Reports Generated ---")
+print("1. daily_outreach_report.csv (The to-do list)")
+print("2. executive_summary_report.csv (The high-level stats)")
