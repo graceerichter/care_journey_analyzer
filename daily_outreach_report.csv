@@ -1,0 +1,14 @@
+client_id,inquiry_date,consult_date,first_session_date,status,status_category
+1003,2026-01-20,,,Inquiry Only,High Risk: No Consult
+1004,2026-01-10,,,Inquiry Only,High Risk: No Consult
+1005,2026-01-02,2026-01-04,,Dropped After Consult,High Risk: Stalled Match
+1006,2026-02-09,2026-02-13,,Dropped After Consult,High Risk: Stalled Match
+1008,2026-01-05,2026-01-07,,Dropped After Consult,High Risk: Stalled Match
+1010,2026-01-28,2026-02-01,,Dropped After Consult,High Risk: Stalled Match
+1011,2026-01-25,2026-01-29,,Dropped After Consult,High Risk: Stalled Match
+1013,2026-02-28,2026-03-03,,Dropped After Consult,High Risk: Stalled Match
+1018,2026-02-16,,,Inquiry Only,High Risk: No Consult
+1019,2026-02-14,,,Inquiry Only,High Risk: No Consult
+1021,2026-01-18,,,Inquiry Only,High Risk: No Consult
+1022,2026-03-01,2026-03-05,,Dropped After Consult,High Risk: Stalled Match
+1027,2026-02-05,2026-02-06,,Dropped After Consult,High Risk: Stalled Match
