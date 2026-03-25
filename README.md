@@ -1,50 +1,39 @@
-# care_journey_analyzer
-A Python analytics tool for healthcare operations. It identifies bottlenecks in the patient journey, calculates 'Time-to-Care' deltas, and flags high-risk stalled matches to improve clinical onboarding and ensure no patient falls through the cracks.
+Care Journey & Operational Bottleneck Analyzer
+📌 Project Overview
+In mental healthcare, the "Time-to-Care" (the gap between a client’s initial inquiry and their first therapy session) is the most critical predictor of patient success. If a match stalls, the likelihood of a patient disengaging increases exponentially.
 
-*Overview*
+This Python-based Operational Suite automates the triaging process for Care Coordination teams. It identifies exactly where patients are stuck in the funnel and generates high-priority outreach lists, transforming a reactive workflow into a proactive, data-driven strategy.
 
-In mental healthcare coordination, the transition from a matching consult to the first therapy session is a critical window. Delays in this "Time-to-Care" period are highly correlated with patient drop-off.
+🚀 Key Features
+Dynamic Risk Segmentation: Automatically categorizes patients into "High Risk," "Pending," or "Active" based on time-delays in the care journey.
 
-This project is a Python-based decision-support tool designed to help Care Coordination teams move from manual triaging to data-driven outreach. It analyzes patient milestone data to identify exactly where the "leaky bucket" is in the onboarding funnel and flags specific clients who require immediate follow-up.
+Visual Pipeline Dashboard: Generates a .png bar chart highlighting the distribution of patient statuses for executive-level reporting.
 
+Automated Triage Reporting: Exports a daily_outreach_report.csv, providing coordinators with a pre-filtered "To-Do" list of clients needing immediate intervention.
 
-*Features*
+KPI Tracking: Calculates the "Time-to-Care" delta to help management identify systemic bottlenecks in the matching process.
 
-Automated Risk Categorization: Uses custom logic to flag "High Risk" cases where a match has stalled for more than 7 days.
+🛠️ Tech Stack & Dependencies
+Python 3.x
 
-Time-to-Care Metrics: Calculates the average duration between inquiry, consultation, and the first session.
+Pandas: For data wrangling, cleaning, and date-delta calculations.
 
-Operational Dashboard: Generates a visual bar chart (via Matplotlib) to give leadership a bird's-eye view of the current patient pipeline.
+Matplotlib: For programmatic data visualization.
 
-Actionable Outreach List: Filters and exports a high-priority list of clients needing intervention, saving coordinators hours of manual spreadsheet review.
+Subprocess/OS: For automated file generation and system-level reporting.
 
+📁 Project Structure
+data_generator.py: A utility script to create 50+ rows of realistic, "messy" patient data for testing.
 
-*Tech Stack*
+care_journey_analyzer.py: The core logic engine that processes data and runs the risk-assessment functions.
 
-Python 3
+care_journey_dashboard.png: A visual snapshot of the current patient pipeline.
 
-Pandas: For data manipulation and datetime delta calculations.
+daily_outreach_report.csv: The actionable spreadsheet for the Care Coordination team.
 
-Matplotlib: For data visualization and pipeline reporting.
+📊 Business Logic (The "Why")
+The script uses a 7-day "Stalled Match" threshold.
 
+If a patient has completed a matching consult but hasn't booked a first session within 7 days, they are flagged as High Risk.
 
-*How It Works*
-
-Data Ingestion: The script reads a care_journey_data.csv containing patient milestones.
-
-Date Processing: Converts raw strings into datetime objects to calculate precise "days-since" metrics.
-
-Risk Mapping: Applies a logic function to segment patients into categories like High Risk: Stalled Match, Pending, or Active Care.
-
-Reporting: Outputs a summary of urgent tasks and saves a visual distribution chart (care_journey_dashboard.png).
-
-
-*Impact*
-
-This tool transforms the Care Coordinator role from reactive to proactive. By identifying bottlenecks in real-time, operations teams can:
-
-Improve Retention: Intervene before a patient disengages from the process.
-
-Optimize Workflows: Identify if specific stages of the funnel (e.g., insurance verification) are causing systemic delays.
-
-Scale Operations: Automate the "who do I call today?" decision-making process.
+This allows the operations team to focus 100% of their manual outreach on the 20% of patients most likely to drop off, significantly increasing the "conversion-to-care" rate.
